@@ -14,6 +14,12 @@ public class LearnjavaApplication {
 		// Map Example
 		MapExample example = new MapExample();
 		example.ShowMap();
+
+		// Inner Class Example
+
+		InnerClassExample innerClassExample = new InnerClassExample("test1");
+		System.out.println(innerClassExample.useMyInnerClass()); // should say "test2"
+
 	}
 
 }
