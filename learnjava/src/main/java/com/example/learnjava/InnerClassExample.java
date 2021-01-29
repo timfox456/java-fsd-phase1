@@ -19,7 +19,7 @@ public class InnerClassExample {
         return innerClassMyMember2;
     }
 
-    private class MyInnerClass {
+    public class MyInnerClass {
 
         private String myMember2;
 

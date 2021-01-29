@@ -1,6 +1,7 @@
 package com.example.learnjava;
 
 
+import com.example.learnjava.InnerClassExample.MyInnerClass;
 import java.util.HashMap;
 import java.util.ArrayList;
 
@@ -19,6 +20,15 @@ public class LearnjavaApplication {
 
 		InnerClassExample innerClassExample = new InnerClassExample("test1");
 		System.out.println(innerClassExample.useMyInnerClass()); // should say "test2"
+
+		// String
+
+		StringExample stringExample = new StringExample();
+
+		stringExample.TestStrings();
+
+
+
 
 	}
 
