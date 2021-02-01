@@ -21,6 +21,8 @@ public class StringExample {
 
         for (int i = 0; i < 10; i ++) {
             builder.append(String.valueOf(i));
+            System.out.println(builder.toString());
+
         }
 
     }

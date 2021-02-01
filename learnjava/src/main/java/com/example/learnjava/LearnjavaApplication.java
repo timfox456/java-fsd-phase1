@@ -27,6 +27,12 @@ public class LearnjavaApplication {
 
 		stringExample.TestStrings();
 
+		// Array
+
+		ArrayExample arrayExample = new ArrayExample();
+		arrayExample.TestArrays();
+
+
 
 
 
