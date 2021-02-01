@@ -11,15 +11,24 @@ public class LearnjavaApplication {
 
 		System.out.println("Hello World!");
 
+		System.out.println("--------------------");
+
 
 		// Map Example
 		MapExample example = new MapExample();
 		example.ShowMap();
 
+
+		System.out.println("--------------------");
+
+
 		// Inner Class Example
 
 		InnerClassExample innerClassExample = new InnerClassExample("test1");
 		System.out.println(innerClassExample.useMyInnerClass()); // should say "test2"
+
+
+		System.out.println("--------------------");
 
 		// String
 
@@ -27,13 +36,20 @@ public class LearnjavaApplication {
 
 		stringExample.TestStrings();
 
+		System.out.println("--------------------");
+
+
 		// Array
 
 		ArrayExample arrayExample = new ArrayExample();
 		arrayExample.TestArrays();
 
+		System.out.println("--------------------");
 
+        // Regex
 
+		RegexExample regexExample = new RegexExample();
+		regexExample.FindPatterns();
 
 
 	}

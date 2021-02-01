@@ -22,11 +22,9 @@ public class ArrayExample {
     {
         for(int i = 0; i < 8; i ++) {
             for (int j = 0; j < 8; j++) {
-                if((i < 3) && (i % 2 == 0) && (i+j) % 2 == 1){
+                if ((i < 3) && (i+j)% 2 == 0) {
                     checkerboard[i][j] = 1;
-                }
-
-                else if ((i > 4) && (i < 8) && (i % 2 == 0) && ((i +j) % 2 == 1)) {
+                } else if ((i > 4) && (i+j)% 2 == 0) {
                     checkerboard[i][j] = 2;
                 }
 
