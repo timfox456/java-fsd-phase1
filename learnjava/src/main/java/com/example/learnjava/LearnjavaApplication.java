@@ -74,5 +74,16 @@ public class LearnjavaApplication {
 			}
 		}
 		System.out.println("MAIN: End of Main Thread...");
+
+		System.out.println("MAIN: Running Sleep Wait Example...");
+
+		try {
+			Thread.sleep(1000);
+			ThreadSleepWaitExample.RunSleepWait();
+		} catch (InterruptedException iex) {
+			System.out.println("MAIN:Exception in main thread: "+iex.getMessage());
+		}
+
+
 	}
 }
