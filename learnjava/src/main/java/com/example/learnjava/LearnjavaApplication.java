@@ -90,6 +90,14 @@ public class LearnjavaApplication {
 		ThreadSender snd = new ThreadSender();
 		ThreadedSend S1 =
 				new ThreadedSend( " Hi " , snd );
+
+		// Sleep for 100ms
+		try {
+			Thread.sleep(100);
+		} catch (InterruptedException iex) {
+			System.out.println("MAIN:Exception in main thread: "+iex.getMessage());
+		}
+
 		ThreadedSend S2 =
 				new ThreadedSend( " Bye " , snd );
 		S1.start();
@@ -102,6 +110,19 @@ public class LearnjavaApplication {
 		catch(Exception e)
 		{
 			System.out.println("Interrupted");
+		}
+
+		System.out.println("-----------------");
+		System.out.println("ExceptionExample:");
+
+		ExceptionExample exceptionExample = new ExceptionExample();
+		exceptionExample.HandleException();
+
+		try {
+			exceptionExample.TranslateText();
+		}
+		catch (UnknownWordException ex) {
+			System.err.println(ex.getMessage());
 		}
 
 
