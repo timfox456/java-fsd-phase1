@@ -126,5 +126,20 @@ public class LearnjavaApplication {
 		}
 
 
+		// Sleep for 100ms
+		try {
+			Thread.sleep(100);
+		} catch (InterruptedException iex) {
+			System.out.println("MAIN:Exception in main thread: "+iex.getMessage());
+		}
+
+
+
+		System.out.println("-----------------");
+		System.out.println("FileExample:");
+
+		FileExample fileExample = new FileExample();
+		fileExample.CreateFile("text.txt");
+
 	}
 }
