@@ -2,6 +2,7 @@ package com.example.learnjava;
 
 
 import com.example.learnjava.InnerClassExample.MyInnerClass;
+import com.example.learnjava.cars.VehicleExample;
 
 import java.io.File;
 import java.util.HashMap;
@@ -144,6 +145,12 @@ public class LearnjavaApplication {
 		fileExample.DeleteFileIfExists("text.txt");
 		File myFile = fileExample.CreateFile("text.txt");
 		fileExample.WriteFile("Hello world! LOL");
+
+
+		System.out.println("-----------------");
+		System.out.println("VehicleExample:");
+		VehicleExample vehicleExample = new VehicleExample();
+		vehicleExample.GetVehicles();
 
 	}
 }
