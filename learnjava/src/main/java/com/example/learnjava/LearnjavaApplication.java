@@ -2,6 +2,8 @@ package com.example.learnjava;
 
 
 import com.example.learnjava.InnerClassExample.MyInnerClass;
+
+import java.io.File;
 import java.util.HashMap;
 import java.util.ArrayList;
 
@@ -139,7 +141,9 @@ public class LearnjavaApplication {
 		System.out.println("FileExample:");
 
 		FileExample fileExample = new FileExample();
-		fileExample.CreateFile("text.txt");
+		fileExample.DeleteFileIfExists("text.txt");
+		File myFile = fileExample.CreateFile("text.txt");
+		fileExample.WriteFile("Hello world! LOL");
 
 	}
 }
