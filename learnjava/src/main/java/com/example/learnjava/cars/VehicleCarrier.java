@@ -21,4 +21,11 @@ public class VehicleCarrier extends Vehicle {
             v.Park();  // Polymorphism
         }
     }
+
+    public void DriveAll() {
+        for (Vehicle v : vehiclesCarried) {
+            v.DriveTo("home");
+        }
+    }
 }
+

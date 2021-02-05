@@ -1,11 +1,10 @@
 package com.example.learnjava.cars;
 
-public class Motorcycle extends Vehicle{
+public class Motorcycle extends Vehicle implements Drivable, SecondDrivable {
 
 
     private boolean kickstand = false;
     public void Park() {
-x
         kickstand = true;
         System.out.println("Parking the " + getModelName());
         super.Park();
@@ -13,6 +12,9 @@ x
 
     public void DriveTo(String destination) {
         kickstand = false;
+        super.DriveTo(destination);  //VEHICLE
+        SecondDrivable.super.DriveTo(destination);  //SecondDrivable
+        System.out.println("Motorcycle Driving " + destination);
         super.Move(destination);
     }
 

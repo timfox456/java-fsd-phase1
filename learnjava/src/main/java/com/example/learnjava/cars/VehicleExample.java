@@ -10,6 +10,7 @@ public class VehicleExample {
         vehicleCarrier.CarryVehicle(new Motorcycle("Ducati"));
         vehicleCarrier.ParkAll();
 
+        vehicleCarrier.DriveAll();
         for (Vehicle v : vehicleCarrier.getVehiclesCarried()) {
             System.out.println(v.getModelName());
         }

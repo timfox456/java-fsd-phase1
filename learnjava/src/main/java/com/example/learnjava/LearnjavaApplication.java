@@ -5,6 +5,10 @@ import com.example.learnjava.InnerClassExample.MyInnerClass;
 import com.example.learnjava.cars.VehicleExample;
 
 import java.io.File;
+import java.nio.file.FileSystems;
+import java.nio.file.FileSystem;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.ArrayList;
 
@@ -141,11 +145,29 @@ public class LearnjavaApplication {
 		System.out.println("-----------------");
 		System.out.println("FileExample:");
 
+
+		String fileName = "text.txt";
+		Path path = FileSystems.getDefault().getPath(fileName).toAbsolutePath();
+
+		FileSystem myFileSystem = FileSystems.getDefault();
+
+		Path pwd = FileSystems.getDefault().getPath(".").toAbsolutePath();
+
+		System.out.println(pwd);
+
+		Path paths = Paths.get("foo", "bar", "baz.txt");
+
+
+		System.out.println(path);
+
+
+
 		FileExample fileExample = new FileExample();
 		fileExample.DeleteFileIfExists("text.txt");
 		File myFile = fileExample.CreateFile("text.txt");
 		fileExample.WriteFile("Hello world! LOL");
-
+		fileExample.WriteFileStreams("Hello World!\nHow are you?");
+		fileExample.ReadFileStream("text2.txt");
 
 		System.out.println("-----------------");
 		System.out.println("VehicleExample:");

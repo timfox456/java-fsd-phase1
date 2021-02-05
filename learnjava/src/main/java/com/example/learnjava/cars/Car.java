@@ -1,6 +1,6 @@
 package com.example.learnjava.cars;
 
-public class Car extends Vehicle {
+public class Car extends Vehicle implements Drivable, SecondDrivable {
 
     boolean hasSunroof;
 
@@ -23,6 +23,8 @@ public class Car extends Vehicle {
 
         this.ShiftGear(2);
         this.isParked = false;
+        Drivable.super.DriveTo(destination);
+        System.out.println("Car Driving " + destination);
         super.Move(destination);
 
     }

@@ -64,5 +64,11 @@ public abstract class Vehicle {
         currentLocation = destination;
     }
 
+    public void DriveTo(String destination) {
+
+        System.out.println("Vehicle DriveTo " + destination);
+        currentLocation = destination;
+    }
+
 
 }
