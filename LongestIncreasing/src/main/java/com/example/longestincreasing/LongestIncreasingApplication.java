@@ -14,7 +14,12 @@ public class LongestIncreasingApplication {
 		SequenceGenerator sg = new SequenceGenerator(n);
 		ArrayList<Integer> sequence = sg.GenerateSequence();
 
-		
+		for (int i : sequence) {
+
+
+
+		}
+
 
 
 	}

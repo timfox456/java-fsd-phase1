@@ -20,6 +20,8 @@ The indices have to be sequential.  They themselves should be increasing but not
 
 A sequence must be increasing.  2,2,2 is not a sequence because 2 = and is not increasing.
 
+If there is more than one sequence of the same length, then returning any of those sequences is acceptable.
+
 Your solution should be no worse than polynomial O(n^2) in complexity, but if it can be improved, then that is encouraged.
 
 Example:
