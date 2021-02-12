@@ -188,5 +188,14 @@ public class LearnjavaApplication {
 		System.out.println(arrayExample.KthSmallestNumber(arr, 3));
 
 
+
+
+		System.out.println("-----------------");
+		System.out.println("Linked List Example:\n\n");
+
+		LinkedListExample linkedListExample = new LinkedListExample();
+		linkedListExample.TestLinkedList();
+
+
 	}
 }
