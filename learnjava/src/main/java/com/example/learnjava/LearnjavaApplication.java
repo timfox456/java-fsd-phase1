@@ -196,6 +196,14 @@ public class LearnjavaApplication {
 		LinkedListExample linkedListExample = new LinkedListExample();
 		linkedListExample.TestLinkedList();
 
+		System.out.println("-----------------");
+		System.out.println("Search Sort Example:\n\n");
+
+		SearchSortExample searchSortExample = new SearchSortExample();
+		searchSortExample.LinearSearch();
+		searchSortExample.BinarySearch();
+		searchSortExample.BubbleSort();
+		searchSortExample.TestQuickSort();
 
 	}
 }
