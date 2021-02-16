@@ -87,89 +87,65 @@ public class SearchSortExample {
     private ArrayList<Integer> list = new ArrayList<Integer>();
 
 
-    private void InitializeList() {
-        list.add(3);
-        list.add(1);
-        list.add(4);
-        list.add(2);
-        list.add(5);
-    }
+    // QuickSort Code
 
+    int partition(int arr[], int low, int high)
+    {
+        int pivot = arr[high];
+        int i = (low-1); // index of smaller element
+        for (int j=low; j<high; j++)
+        {
+            if (arr[j] <= pivot)
+            {
+                i++;
 
-    int partition(ArrayList<Integer> inputArray, int start,int end){
-        System.out.println("\n---------Iteration Starts----------");
-        System.out.println("\nSorting Window from index number:"+start+" to "+end);
-
-        int init = start;
-        int length = end;
-
-        Random r = new Random();
-        int pivotIndex = nextIntInRange(start,end,r);
-        int pivot = inputArray.get(pivotIndex);
-
-        System.out.println("Pivot Element "+pivot+" at index:"+pivotIndex);
-
-        while(true){
-            while(inputArray.get(length)>pivot && length>start){
-                length--;
-            }
-
-            while(inputArray.get(init)<pivot && init<end){
-                init++;
-            }
-
-            if(init<length){
-                int temp;
-                temp = inputArray.get(init);
-                inputArray.set(init,inputArray.get(length));
-                inputArray.set(length,temp);
-                length--;
-                init++;
-
-                System.out.println("\nAfter Swapping");
-                for(int i=start;i<=end;i++){
-                    System.out.print(inputArray.get(i)+" ");
-                }
-            }else{
-                System.out.println("\n---------Iteration Ends---------");
-                return length;
+                // swap arr[i] and arr[j]
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
             }
         }
 
+        // swap arr[i+1] and arr[high] (or pivot)
+        int temp = arr[i+1];
+        arr[i+1] = arr[high];
+        arr[high] = temp;
+
+        return i+1;
     }
 
 
-    // Below method is to just find random integer from given range
-    static int nextIntInRange(int min, int max, Random rng) {
-        if (min > max) {
-            throw new IllegalArgumentException("Cannot draw random int from invalid range [" + min + ", " + max + "].");
-        }
-        int diff = max - min;
-        if (diff >= 0 && diff != Integer.MAX_VALUE) {
-            return (min + rng.nextInt(diff + 1));
-        }
-        int i;
-        do {
-            i = rng.nextInt();
-        } while (i < min || i > max);
-        return i;
-    }
 
-    public void QuickSort(ArrayList<Integer> myList, int low, int high) {
+    void sort(int arr[], int low, int high)
+    {
+        if (low < high)
+        {
 
-        if (low < high) {
-            int pi = this.partition(myList,low, high);
+            int pi = partition(arr, low, high);
 
-            QuickSort(myList, low, pi);
-            QuickSort(myList, pi + 1, high);
+
+            sort(arr, low, pi-1);
+            sort(arr, pi+1, high);
         }
     }
-
-    public void TestQuickSort() {
-        System.out.println("Testing Quicksort....");
-        QuickSort(list, 0, list.size());
-        System.out.println(list);
+    static void printArray(int arr[])
+    {
+        int n = arr.length;
+        for (int i=0; i<n; ++i)
+            System.out.print(arr[i]+" ");
+        System.out.println();
     }
 
+    public void TestQuickSort()
+    {
+        int arr[] = {10, 7, 8, 9, 1, 5};
+        int n = arr.length;
 
+        this.sort(arr, 0, n-1);
+
+        System.out.println("sorted array");
+        printArray(arr);
+    }
 }
+
+
