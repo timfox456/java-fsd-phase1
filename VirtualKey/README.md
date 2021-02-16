@@ -51,11 +51,11 @@ The goal of the company is to deliver a high-end quality product as early as pos
 
  * Code to display the welcome screen. It should display:
 
- * Application name and the developer details 
+    * Application name and the developer details 
 
- * The details of the user interface such as options displaying the user interaction information 
-
- * Features to accept the user input to select one of the options listed 
+    * The details of the user interface such as options displaying the user interaction information 
+   
+    * Features to accept the user input to select one of the options listed 
 
  * The first option should return the current file names in ascending order. The root directory can be either empty or contain few files or folders in it
 
