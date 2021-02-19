@@ -16,8 +16,9 @@ You have been assigned a few tasks during the sprint planning. Solving the bugs 
 ## Bugs to be fixed:
 
  * Add the missing source code to the application based on searching technique. Find the appropriate comments to code for the searching technique.
-    - Implement a sorting algorithm with O(n) or better complexity.
- * Write source code for sorting the predefined array and ensure the functionality of the application. Find the appropriate comments to code for sorting the predefined array.
+    - Implement a search algorithm with O(n) or better complexity.
+    - It is acceptable to sort first in order to facilitate a binary search if desired.
+* Write source code for sorting the predefined array and ensure the functionality of the application. Find the appropriate comments to code for sorting the predefined array.
     - The sort should be your own code not calling `ArrayList.sort()`
     - Please try to implement an O(n log n) sorting algorithm.
     - If you had already turned this in prior with bubble sort that is ok.

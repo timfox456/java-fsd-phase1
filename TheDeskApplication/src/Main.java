@@ -110,6 +110,13 @@ public class Main {
     }
     private static void sortExpenses(ArrayList<Integer> arrayList) {
         int arrlength =  arrayList.size();
+
+        int[] array =  arrayList.stream().mapToInt(i -> i).toArray();
+
+        for (int i=0; i <  array.length; i ++)
+        {
+            System.out.println(array[i]);
+        }
        //TODO: Complete the method. The expenses should be sorted in ascending order.
     }
 }
