@@ -52,6 +52,8 @@ public class Directory {
     }
     public void AddFile(File file) {
         //TODO: Add file
+        files.add(file);
+
     }
     public void DeleteDirectory(Directory directory) {
         //TODO: Delete directory

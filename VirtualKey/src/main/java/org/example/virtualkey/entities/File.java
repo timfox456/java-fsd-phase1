@@ -7,6 +7,10 @@ public class File {
     String path;
 
 
+    public File(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }
