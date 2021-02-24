@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import org.example.virtualkey.entities.File;
+import org.example.virtualkey.services.ScreenService;
 
 public class WelcomeScreen implements Screen {
 
@@ -34,6 +35,7 @@ public class WelcomeScreen implements Screen {
 
     }
 
+    @Override
     public void GetUserInput()
     {
         int selectedOption;
@@ -51,9 +53,11 @@ public class WelcomeScreen implements Screen {
                 this.ShowFiles();
                 break;
             case 2: // Show Submenu
-                FileOptionsScreen screen = new FileOptionsScreen();
-                screen.Show();
-                screen.GetUserInput();
+
+                ScreenService.setCurrentScreen(ScreenService.FileOptionsScreen);
+                ScreenService.getCurrentScreen().Show();
+                ScreenService.getCurrentScreen().GetUserInput();
+
                 break;
             default:
                 System.out.println("Invalid Option");

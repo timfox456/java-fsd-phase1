@@ -3,6 +3,7 @@ package org.example.virtualkey;
 import org.example.virtualkey.entities.*;
 import org.example.virtualkey.screens.WelcomeScreen;
 import org.example.virtualkey.services.DirectoryService;
+import org.example.virtualkey.services.ScreenService;
 
 import java.util.Optional;
 
@@ -18,10 +19,10 @@ public class VirtualKeyApplication {
 
         DirectoryService.AddTestData();
         DirectoryService.PrintFiles();
-        WelcomeScreen screen = new WelcomeScreen();
+        //WelcomeScreen screen = new WelcomeScreen();
 
-        screen.Show();
-        screen.GetUserInput();
+        ScreenService.getCurrentScreen().Show();
+        ScreenService.getCurrentScreen().GetUserInput();
 
     }
 }

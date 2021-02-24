@@ -16,7 +16,8 @@ public class FileOptionsScreen implements Screen {
         options.add("1. Add a File");
         options.add("2. Delete A File");
         options.add("3. Search A FIle");
-        options.add("4. Quit");
+        options.add("4. Return to Main Menu");
+        options.add("5. Quit");
 
     }
 
@@ -31,6 +32,7 @@ public class FileOptionsScreen implements Screen {
 
     }
 
+    @Override
     public void GetUserInput()
     {
         int selectedOption;
