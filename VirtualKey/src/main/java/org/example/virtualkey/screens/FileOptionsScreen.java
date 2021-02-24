@@ -36,7 +36,7 @@ public class FileOptionsScreen implements Screen {
     public void GetUserInput()
     {
         int selectedOption;
-        while ((selectedOption = this.getOption()) != 4) {
+        while ((selectedOption = this.getOption()) != 5) {
             this.NavigateOption(selectedOption);
         }
     }
