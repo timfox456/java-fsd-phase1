@@ -36,7 +36,9 @@ Company Lockers Pvt. Ltd. hired you as a Full Stack Developer. They aim to digit
 
     * Option to close the application
 
- 
+ * There is no need to implement the user changing the current working directory or navigating through subdirectories.
+    - There can be folders/directories in the user's current working directory
+    - The user does not need to be able to navigate those folders.
 
 The goal of the company is to deliver a high-end quality product as early as possible. 
  
